@@ -6,7 +6,6 @@
 #include <set>
 #include <cstdlib>
 #include <iostream>
-#include "def.h"
 #include "ast.h"
 
 using namespace std;

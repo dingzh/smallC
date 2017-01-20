@@ -3,7 +3,7 @@
 #define FILE_INTERPRET_H
 
 
-#include "translate.h"
+#include "generateIR.h"
 #include "optimize.h"
 #include <cstdio>
 #define MAX_LENGTH (10000)

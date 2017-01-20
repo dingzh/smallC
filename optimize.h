@@ -2,7 +2,7 @@
 #ifndef FILE_OPTIMIZE_H
 #define FILE_OPTIMIZE_H
 
-#include "translate.h"
+#include "generateIR.h"
 #define MAX_REGISTER 100001
 int* next_pos;
 int* prev_pos;

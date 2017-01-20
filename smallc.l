@@ -3,9 +3,7 @@
 %{
 #include <cstdlib>
 #include <cstdio>
-
-#include "def.h"
-
+#include "ast.h"
 
 #include "smallc.tab.h"
 

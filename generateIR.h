@@ -1,7 +1,6 @@
 //This file translate syntax tree into three address codes.
 #ifndef FILE_TRANSLATE_H
 #define FILE_TRANSLATE_H
-#include "def.h"
 #include "ast.h"
 #include "semantics.h"
 #include <cstring>
@@ -34,7 +33,7 @@ struct Quadruple{
 };
 
 vector <Quadruple> IR, GIR, MIR;
-vector <int> RegisterState, RegisterOffset,LabelCont, LabelBreak, vs_reg; 
+vector <int> RegisterState, RegisterOffset, LabelCont, LabelBreak, vs_reg; 
 vector <string> vs_id;
 Quadruple new_quadruple();
 Quadruple new_quadruple_arithmetic_im(char const*s, int ra, int rb, int im);

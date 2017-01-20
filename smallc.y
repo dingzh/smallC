@@ -1,5 +1,4 @@
 %{
-#include "def.h"
 #include "ast.h"
 
 using namespace std;
@@ -7,6 +6,7 @@ extern int yylineno;
 extern char* yytext;
 extern int yylex();
 void yyerror(char *);
+TreeNode* treeroot;
 %}
 
 %union {
@@ -214,8 +214,8 @@ UNARYOP:
 
 %%
 #include "semantics.h"
-#include "translate.h"
-#include "interpret.h"
+#include "generateIR.h"
+#include "generateMIPS.h"
 extern TreeNode* treeroot;
 
 void yyerror(char *s)
@@ -228,7 +228,7 @@ int main(int argc, char *argv[])
 {
 	freopen(argv[1], "r", stdin);
 	// freopen("testcase/main.c", "r", stdin);
-	freopen("mips.s", "w", stdout);
+	freopen(argv[2], "w", stdout);
 	if(!yyparse()){
 		fprintf(stderr,"Parsing complete.\n");
 	} else {
